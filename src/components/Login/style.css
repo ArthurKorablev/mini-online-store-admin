@@ -4,6 +4,7 @@
     height: 670px;
     left: 467.5px;
     top: 171.5px;
+    border-radius: 5px;
     background-color: #F5F5F5;
 }
 
@@ -14,7 +15,9 @@
     height: 56px;
     left: 116.5px;
     top: 205.5px;
+    padding: 20px;
     background: #D9D9D9;
+    box-sizing: border-box;
 }
 
 .userPass{
@@ -24,8 +27,10 @@
     left: 116.5px;
     top: 307.5px;
     border: 0;
-
+    padding: 0;
+    padding: 20px;
     background: #D9D9D9;
+    box-sizing: border-box;
 }
 
 .userSubmit{
@@ -52,4 +57,17 @@
     color: #44B26F;
     font-size: 14px;
     padding: 20px; 
+}
+
+.eye{
+    position: absolute;
+    top: 320px;
+    left: 345.5px;
+    border: none;
+    background-color: #D9D9D9;
+}
+
+.eye-icon{
+    color: #44B26F;
+    font-size: 32px;
 }
