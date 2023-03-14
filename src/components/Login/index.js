@@ -1,6 +1,7 @@
 import "./style.css";
 import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
 import { useState } from "react";
+import { API_URL } from "../../constants";
 
 const Login = () => {
   const [isShown, setIsShown] = useState(false);
@@ -12,9 +13,21 @@ const Login = () => {
     setIsShown((isShown) => !isShown);
   };
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    console.log(userName, password);
+
+    const response = await fetch(`${API_URL}/admin`);
+    const data = await response.json();
+
+    data.forEach((item) => {
+      if (userName === item.userName && password === item.password) {
+        console.log(item.jwt);
+        localStorage.setItem("token", item.jwt);
+      }
+    });
+
+    setUserName("");
+    setPassword("");
   };
 
   return (

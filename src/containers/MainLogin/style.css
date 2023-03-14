@@ -4,3 +4,11 @@
     height: 150vh;
     position: relative;
 }
+
+.conteiner{
+    width: 240px;
+    position: absolute;
+    top: 256px;
+    left: 603px;
+    z-index: 1;
+}

@@ -1,31 +1,8 @@
-import './style.css';
-
-const Logo = () => {
+const Logo = ({className}) => {
+  console.log(className);
   return (
-    <div className="conteiner">
-        <div className="rozetka">
-            <div className="text">
-                <img src="/Pics/R.png" alt="" />
-            </div>
-            <div className="text">
-                <img src="/Pics/O.png" alt="" />
-            </div>
-            <div className="text">
-                <img src="/Pics/Z.png" alt="" />
-            </div>
-            <div className="text">
-                <img src="/Pics/E.png" alt="" />
-            </div>
-            <div className="text">
-                <img src="/Pics/T.png" alt="" />
-            </div>
-            <div className="text">
-                <img src="/Pics/K.png" alt="" />
-            </div>
-            <div className="text">
-                <img src="/Pics/A.png" alt="" />
-            </div>
-        </div>
+    <div className={className}>
+        <img src="/Pics/RozetkaCircle.svg" alt="" />
     </div>
   );
 }
