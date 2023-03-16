@@ -20,6 +20,7 @@ const Login = () => {
     const data = await response.json();
 
     data.forEach((item) => {
+      console.log(item);
       if (userName === item.userName && password === item.password) {
         console.log(item.jwt);
         localStorage.setItem("token", item.jwt);

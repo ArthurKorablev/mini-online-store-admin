@@ -1,0 +1,110 @@
+.table{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    position: absolute;
+    width: 872px;
+    left: calc(50% - 436px);
+    top: 300px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.thead{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    width: 872px;
+    height: 39px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    color: #726969;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.arrow::after{
+    content: url('../../../public/Pics/th.svg');
+    transform: translateY(2px);
+}
+
+.frameHead{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 40px;
+    gap: 10px;
+    box-sizing: border-box;
+
+    width: 145.33px;
+    height: 39px;
+
+    background: #0EC86F;
+
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+.product-tr{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+
+    width: 872px;
+    height: 39px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.product-tr-odd{
+    background: #D9D9D9;
+    color: #FFFFFF;
+}
+
+.product-tr-even{
+    background: #3CD78C;
+    color: #A58F8F;
+}
+
+.product-td{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 10px;
+    box-sizing: border-box;
+
+    width: 145.33px;
+    height: 39px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+
+    width: 12px;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.icon-td{
+    width: 20px;
+    height: 22px;
+    flex: none;
+    color: black;
+    order: 0;
+    flex-grow: 0;
+}
+
