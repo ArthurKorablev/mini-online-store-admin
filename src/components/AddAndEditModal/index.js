@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { API_URL } from '../../constants';
 import './style.css';
 const AddAndEditModal = ({productId, setProductId, setIsLoaded, oneProduct, setOneProduct, isActiveAddEdit, setIsActiveAddEdit}) => {
@@ -6,12 +7,14 @@ const AddAndEditModal = ({productId, setProductId, setIsLoaded, oneProduct, setO
         const response = await fetch(`${API_URL}/products/${productId}`);
         const data = response.json();
         console.log(data);
-        // setOneProduct(data);
+        setOneProduct(data);
     }
 
-    if(productId !=null){
-        getProduct();
-    }
+    useEffect(() => {
+        if(isActiveAddEdit && productId && !oneProduct) {
+          getProduct()
+        }
+      }, [isActiveAddEdit, productId])
 
     console.log(oneProduct);
 
