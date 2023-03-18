@@ -11,7 +11,7 @@ const Products = () => {
     const[productId, setProductId] = useState(null);
     const[isActive, setIsActive] = useState(false);
     const [isActiveAddEdit, setIsActiveAddEdit] = useState(false);
-    const [oneProduct, setOneProduct] = useState({});
+    const [oneProduct, setOneProduct] = useState(null);
 
     useEffect(() => {
       if(!isLoaded){

@@ -12,11 +12,10 @@ const AddAndEditModal = ({productId, setProductId, setIsLoaded, oneProduct, setO
 
     useEffect(() => {
         if(isActiveAddEdit && productId && !oneProduct) {
-          getProduct()
+          getProduct();
         }
-      }, [isActiveAddEdit, productId])
+      }, [isActiveAddEdit, productId, oneProduct]);
 
-    console.log(oneProduct);
 
   return (
       <div className={isActiveAddEdit ? "modal-container active" : "modal-container"}>
