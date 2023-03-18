@@ -1,11 +1,22 @@
-import { useState } from 'react';
 import { API_URL } from '../../constants';
 import './style.css';
-const AddAndEditModal = (props) => {
-    console.log(props);
+const AddAndEditModal = ({productId, setProductId, setIsLoaded, oneProduct, setOneProduct, isActiveAddEdit, setIsActiveAddEdit}) => {
+
+    const getProduct = async () => {
+        const response = await fetch(`${API_URL}/products/${productId}`);
+        const data = response.json();
+        console.log(data);
+        // setOneProduct(data);
+    }
+
+    if(productId !=null){
+        getProduct();
+    }
+
+    console.log(oneProduct);
 
   return (
-      <div className="modal-container">
+      <div className={isActiveAddEdit ? "modal-container active" : "modal-container"}>
         <div className="modal-content">
             <div className="modal-title">
                 <span>Edit Product</span>

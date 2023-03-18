@@ -9,7 +9,9 @@ const Products = () => {
     const [products, setProducts] = useState([]);
     const [isLoaded, setIsLoaded] = useState(false);
     const[productId, setProductId] = useState(null);
-    const[isActive, setIsActive] =useState(false);
+    const[isActive, setIsActive] = useState(false);
+    const [isActiveAddEdit, setIsActiveAddEdit] = useState(false);
+    const [oneProduct, setOneProduct] = useState({});
 
     useEffect(() => {
       if(!isLoaded){
@@ -28,7 +30,7 @@ const Products = () => {
     <div className="main">
         <p className='title'>Products</p>
         <Logo className='logo'/>
-        <Table products = {products} setIsLoaded={setIsLoaded} productId= {productId} setProductId= {setProductId} isActive= {isActive} setIsActive={setIsActive}/>
+        <Table products = {products} setIsLoaded={setIsLoaded} productId= {productId} setProductId= {setProductId} isActive= {isActive} setIsActive={setIsActive} oneProduct={oneProduct} setOneProduct={setOneProduct} isActiveAddEdit={isActiveAddEdit} setIsActiveAddEdit={setIsActiveAddEdit}/>
     </div>
   );
 }

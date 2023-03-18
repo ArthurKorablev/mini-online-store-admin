@@ -4,8 +4,8 @@ import ConfirmDelete from '../ConfirmDelete';
 import { useState } from 'react';
 import AddAndEditModal from '../AddAndEditModal';
 
-const Table = ({products, setIsLoaded, productId, isActive, setProductId, setIsActive}) => {    
-
+const Table = ({products, setIsLoaded, productId, isActive, setProductId, oneProduct, setIsActive, setOneProduct, isActiveAddEdit, setIsActiveAddEdit}) => {    
+console.log(isActiveAddEdit);
   return (
     <div>
         <table className='table'>
@@ -21,12 +21,12 @@ const Table = ({products, setIsLoaded, productId, isActive, setProductId, setIsA
             </thead>
             <tbody>
                 {products.map((product, index) => (
-                    <Product key={index} product= {product} index={index} setProductId= {setProductId} setIsActive={setIsActive}/>
+                    <Product key={index} product= {product} index={index} setProductId= {setProductId} setIsActive={setIsActive} setIsActiveAddEdit={setIsActiveAddEdit}/>
                 ))}
             </tbody>
         </table>
         <ConfirmDelete productId={productId} isActive={isActive} setProductId={setProductId} setIsActive= {setIsActive} setIsLoaded= {setIsLoaded}/>
-        <AddAndEditModal productId={productId} isActive={isActive} setProductId={setProductId} setIsActive= {setIsActive} setIsLoaded= {setIsLoaded} />
+        <AddAndEditModal productId={productId} setProductId={setProductId} setIsActive= {setIsActive} setIsLoaded= {setIsLoaded} oneProduct={oneProduct} setOneProduct={setOneProduct} isActiveAddEdit={isActiveAddEdit} setIsActiveAddEdit= {setIsActiveAddEdit}/>
     </div>
   );
 }
