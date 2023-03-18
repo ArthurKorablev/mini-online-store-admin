@@ -1,10 +1,13 @@
 import './style.css';
 import Product from '../Product';
+import ConfirmDelete from '../ConfirmDelete';
+import { useState } from 'react';
+import AddAndEditModal from '../AddAndEditModal';
 
-const Table = ({products}) => {
+const Table = ({products, setIsLoaded, productId, isActive, setProductId, setIsActive}) => {    
 
   return (
-    <div className="main">
+    <div>
         <table className='table'>
             <thead>
                 <tr className='thead'>
@@ -18,10 +21,12 @@ const Table = ({products}) => {
             </thead>
             <tbody>
                 {products.map((product, index) => (
-                    <Product key={index} product= {product} index={index}/>
+                    <Product key={index} product= {product} index={index} setProductId= {setProductId} setIsActive={setIsActive}/>
                 ))}
             </tbody>
         </table>
+        <ConfirmDelete productId={productId} isActive={isActive} setProductId={setProductId} setIsActive= {setIsActive} setIsLoaded= {setIsLoaded}/>
+        <AddAndEditModal productId={productId} isActive={isActive} setProductId={setProductId} setIsActive= {setIsActive} setIsLoaded= {setIsLoaded} />
     </div>
   );
 }

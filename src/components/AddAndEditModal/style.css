@@ -1,0 +1,118 @@
+.modal-container{
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  transform: scale(0);
+
+}
+
+.modal-container.active{
+    transform: scale(1);  
+}
+
+.modal-title{
+    width: 429px;
+    height: 43px;
+    background: #FFFFFF;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #D9D9D9;
+    text-align: left;
+    padding: 0;
+}
+
+.modal-form{
+    position: absolute;
+    left: 34px;
+    top: 40px;
+    margin: 0;
+}
+
+.modal-content{
+    position: absolute;
+    width: 429px;
+    height: 532px;
+
+    top: calc(50% - 216px);
+    left: calc(50% - 266px);
+
+    background: #D9D9D9
+}
+
+.modal-lable{
+   display: block;
+   text-align: left;
+   font-size: 14px;
+   transform: translateY(20px);
+   margin: 0;
+   color: #FFFFFF;
+}
+
+.modal-input{
+    display: block;
+    width: 360px;
+    height: 31px;
+    border: none;
+}
+
+.modal-area{
+    display: block;
+    width: 360px;
+    height: 90px;
+    border: none;
+}
+
+.modal-cancel{
+    padding: 7px 30px;
+    gap: 10px;
+
+    position: relative;
+    width: 115px;
+    height: 33px;
+
+    background: #726969;
+
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    margin-right: 15px;
+}
+
+.modal-submit{
+    padding: 7px 30px;
+    gap: 10px;
+
+    position: relative;
+    width: 115px;
+    height: 33px;
+
+    background: #44B26F;
+
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    margin-left: 15px;
+}
+
+.btn-div{
+    transform: translateY(20px);
+}
+
+span{
+    position: absolute;
+    top: 6px;
+    left: 34px;
+}
