@@ -1,6 +1,6 @@
 .modal-container{
   width: 100vw;
-  height: 100vh;
+  height: 150vh;
   background: rgba(0, 0, 0, 0.5);
 
   position: sticky;
@@ -45,7 +45,7 @@
     width: 429px;
     height: 532px;
 
-    top: calc(50% - 216px);
+    top: calc(50% - 429px);
     left: calc(50% - 266px);
 
     background: #D9D9D9
@@ -65,6 +65,12 @@
     width: 360px;
     height: 31px;
     border: none;
+    color: #05BC52;
+    
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    padding-left: 10px;
 }
 
 .modal-area{
@@ -72,6 +78,12 @@
     width: 360px;
     height: 90px;
     border: none;
+
+    color: #05BC52;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    padding-left: 10px;
 }
 
 .modal-cancel{

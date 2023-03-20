@@ -17,7 +17,9 @@ const ConfirmDelete = ({productId, isActive, setProductId, setIsActive, setIsLoa
     setIsLoaded(false);
   }
 
-  const cancelDeleteProduct = () => {
+  const cancelDeleteProduct = (e) => {
+    e.preventDefault();
+
     setProductId(null);
     setIsActive(false);
     setIsLoaded(true);
@@ -27,7 +29,7 @@ const ConfirmDelete = ({productId, isActive, setProductId, setIsActive, setIsLoa
     <div className={isActive ? "containerDelete active" : "containerDelete"}>
         <div className="mainDelete">
             <p>Are you sure you want to delete this product</p>
-            <button className="btn-cancel" onClick={cancelDeleteProduct}>Cancel</button>
+            <button className="btn-cancel" onClick={(e)=>{cancelDeleteProduct(e)}}>Cancel</button>
             <button className="btn-delete" onClick={(event) => {deleteProduct(event, productId)}}>Delete</button>
         </div>
     </div>
