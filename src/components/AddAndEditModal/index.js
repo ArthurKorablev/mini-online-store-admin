@@ -4,6 +4,7 @@ import './style.css';
 
 const AddAndEditModal = ({productId, setProductId, setIsLoaded, oneProduct, setOneProduct, isActiveAddEdit, setIsActiveAddEdit}) => {
 
+
     const getProduct = async () => {
         const response = await fetch(`${API_URL}/products/${productId}`);
         const data = await response.json();
@@ -27,6 +28,7 @@ const AddAndEditModal = ({productId, setProductId, setIsLoaded, oneProduct, setO
             method: "PUT",
             body: JSON.stringify(oneProduct),
           });
+          setProductId(null);
           setOneProduct(null);
           setIsLoaded(false);
           setIsActiveAddEdit(false);
@@ -35,6 +37,7 @@ const AddAndEditModal = ({productId, setProductId, setIsLoaded, oneProduct, setO
     const cancel = (e) => {
         e.preventDefault();
 
+        setProductId(null);
         setOneProduct(null);
         setIsLoaded(true);
         setIsActiveAddEdit(false);
@@ -44,7 +47,7 @@ const AddAndEditModal = ({productId, setProductId, setIsLoaded, oneProduct, setO
       <div className={isActiveAddEdit ? "modal-container active" : "modal-container"}>
         <div className="modal-content">
             <div className="modal-title">
-                <span></span>
+                <span>{productId ? 'EDIT PRODUCT' : 'ADD PRODUCT'}</span>
             </div>
             <form className='modal-form' onSubmit={submitEdit}>
                 <div>

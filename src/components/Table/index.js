@@ -1,8 +1,6 @@
 import './style.css';
 import Product from '../Product';
 import ConfirmDelete from '../ConfirmDelete';
-import { useState } from 'react';
-import AddAndEditModal from '../AddAndEditModal';
 
 const Table = ({products, setIsLoaded, productId, isActive, setProductId, oneProduct, setIsActive, setOneProduct, isActiveAddEdit, setIsActiveAddEdit}) => {    
 console.log(isActiveAddEdit);
@@ -26,7 +24,7 @@ console.log(isActiveAddEdit);
             </tbody>
         </table>
         <ConfirmDelete productId={productId} isActive={isActive} setProductId={setProductId} setIsActive= {setIsActive} setIsLoaded= {setIsLoaded}/>
-        <AddAndEditModal productId={productId} setProductId={setProductId} setIsActive= {setIsActive} setIsLoaded= {setIsLoaded} oneProduct={oneProduct} setOneProduct={setOneProduct} isActiveAddEdit={isActiveAddEdit} setIsActiveAddEdit= {setIsActiveAddEdit}/>
+ 
     </div>
   );
 }
