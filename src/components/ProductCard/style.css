@@ -1,0 +1,106 @@
+.card{
+    width: 273px;
+    background: #FFFFFF;
+
+    padding: 15px;
+    margin: 100px 15px 15px 40px;
+    padding: 0;
+
+    display: grid;
+    grid-template-areas: 
+        "img img"
+        "title title"
+        "price quant"
+        "btn btn";
+
+        border-radius: 7px;
+        box-shadow: 1px 1px 5px 1px;
+}
+
+.card-img{
+    width: 209px;
+    grid-area: img;
+    transform: translateX(25px);
+}
+
+.card-title{
+    width: 241px;
+
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 19px;
+    text-align: center;
+    padding: 0;
+
+    color: #000000;
+
+    grid-area: title;
+
+    transform: translateX(20px);
+}
+
+.card-price{
+    width: 89px;
+
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+
+    color: #FC5B00;
+
+    grid-area: price;
+
+    transform: translateX(25px);
+}
+
+.card-quantity{
+    width: 87px;
+
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+
+    color: #000000;
+
+    grid-area: quant;
+
+    transform: translateX(25px);
+}
+
+.btn-keeper{
+    width: 161px;
+    grid-area: btn;
+    transform: translateX(55px);
+}
+
+.card-btn{
+    width: 161px;
+
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 18px;
+    text-align: center;
+
+    color: #05BC52;
+
+    grid-area: btn;
+
+    text-decoration: none;
+}
+
+.card-btn:hover{
+    color: #066943;
+}
+
+img{
+    width: 100%;
+    border-radius: 7px;
+}
+
+.card-title, .card-price, .card-quantity, .card-img, .btn-keeper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

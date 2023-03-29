@@ -1,0 +1,32 @@
+.previewButton-main {
+  position: absolute;
+  width: 179px;
+  height: 52px;
+  left: 84px;
+  top: 120px;
+
+  background: #ffffff;
+
+  border: none;
+}
+
+.previewButton-icon {
+  position: absolute;
+  left: 10%;
+  top: 20%;
+
+  font-size: 28px;
+}
+
+.link {
+  position: absolute;
+  right: 30%;
+  top: 35%;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 19px;
+
+  color: #05bc52;
+
+  text-decoration: none;
+}

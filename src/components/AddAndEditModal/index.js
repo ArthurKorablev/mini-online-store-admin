@@ -12,7 +12,7 @@ const AddAndEditModal = ({productId, setProductId, setIsLoaded, oneProduct, setO
     }
 
     useEffect(() => {
-        if(isActiveAddEdit && productId && !oneProduct) {
+        if(isActiveAddEdit && productId && !oneProduct?.id) {
           getProduct();
         }
 
@@ -29,7 +29,35 @@ const AddAndEditModal = ({productId, setProductId, setIsLoaded, oneProduct, setO
             body: JSON.stringify(oneProduct),
           });
           setProductId(null);
-          setOneProduct(null);
+          setOneProduct({
+            category: '',
+            description: '',
+            price: '',
+            productName: '',
+            quantity: ''
+          });
+          setIsLoaded(false);
+          setIsActiveAddEdit(false);
+    }
+
+    const submitAdd = async (e) => {
+        e.preventDefault();
+
+        await fetch(`${API_URL}/products`, {
+            headers: {
+              "Content-Type": "application/json",
+            },
+            method: "POST",
+            body: JSON.stringify(oneProduct),
+          });
+          setProductId(null);
+          setOneProduct({
+            category: '',
+            description: '',
+            price: '',
+            productName: '',
+            quantity: ''
+          });
           setIsLoaded(false);
           setIsActiveAddEdit(false);
     }
@@ -38,7 +66,13 @@ const AddAndEditModal = ({productId, setProductId, setIsLoaded, oneProduct, setO
         e.preventDefault();
 
         setProductId(null);
-        setOneProduct(null);
+        setOneProduct({
+            category: '',
+            description: '',
+            price: '',
+            productName: '',
+            quantity: ''
+          });
         setIsLoaded(true);
         setIsActiveAddEdit(false);
     }
@@ -49,14 +83,14 @@ const AddAndEditModal = ({productId, setProductId, setIsLoaded, oneProduct, setO
             <div className="modal-title">
                 <span>{productId ? 'EDIT PRODUCT' : 'ADD PRODUCT'}</span>
             </div>
-            <form className='modal-form' onSubmit={submitEdit}>
+            <form className='modal-form' onSubmit={productId ? submitEdit : submitAdd}>
                 <div>
                     <label className='modal-lable' htmlFor="category">Category</label><br />
-                    <input className='modal-input' id="category" type="text" value={oneProduct?.category} onChange= {(e)=>setOneProduct({...oneProduct, productName: e.target.value})}/>
+                    <input className='modal-input' id="category" type="text" value={oneProduct?.category} onChange= {(e)=>setOneProduct({...oneProduct, category: e.target.value})}/>
                 </div>
                 <div>
                     <label className='modal-lable' htmlFor="name">Name</label><br />
-                    <input className='modal-input' id="name" type="text" value={oneProduct?.productName} onChange= {(e)=>setOneProduct({...oneProduct, category: e.target.value})}/>
+                    <input className='modal-input' id="name" type="text" value={oneProduct?.productName} onChange= {(e)=>setOneProduct({...oneProduct, productName: e.target.value})}/>
                 </div>
                 <div>
                     <label className='modal-lable' htmlFor="quantity">Quantyty</label><br />

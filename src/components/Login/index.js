@@ -1,12 +1,15 @@
 import "./style.css";
 import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { API_URL } from "../../constants";
 
 const Login = () => {
   const [isShown, setIsShown] = useState(false);
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
 
   const showPass = (e) => {
     e.preventDefault();
@@ -29,6 +32,8 @@ const Login = () => {
 
     setUserName("");
     setPassword("");
+
+    navigate('/products');
   };
 
   return (
