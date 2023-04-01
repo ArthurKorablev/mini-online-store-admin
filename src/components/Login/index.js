@@ -3,9 +3,9 @@ import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { API_URL } from "../../constants";
+import Logo from "../Logo";
 
 const Login = () => {
-  const [isError, setError] = useState(false);
   const [isShown, setIsShown] = useState(false);
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
@@ -27,8 +27,6 @@ const Login = () => {
       if (userName === item.userName && password === item.password) {
 
         localStorage.setItem("token", item.jwt);
-      }else{
-        setError(true);
       }
     });
 
@@ -40,12 +38,13 @@ const Login = () => {
 
   return (
     <div className="login">
+      <Logo className='main-logo'/>
       <form onSubmit={(e) => onSubmit(e)} action="">
         <div>
           <input
             value={userName}
             onChange={(e) => setUserName(e.target.value)}
-            className={isError ? "userName error" : "userName"}
+            className='userName'
             type="text"
             placeholder="User Name"
           />
@@ -54,7 +53,7 @@ const Login = () => {
           <input
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className={isError ? "userPass error" : "userPass"}
+            className='userPass'
             type={isShown ? "text" : "password"}
             placeholder="Password"
           />
