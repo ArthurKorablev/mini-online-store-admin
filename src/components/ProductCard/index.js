@@ -1,11 +1,18 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./style.css";
 
 function ProductCard({ product }) {
+
   const { avatar, productName, price, quantity, id } = product;
+  const navigate = useNavigate();
+
+  const nav = (e) =>{
+    e.preventDefault();
+    navigate(`/product/${id}`);
+  }
 
   return (
-    <div className="card">
+    <div onClick={(e) => nav(e)} className="card">
       <div className="card-img">
         <img src={avatar} alt="Product Img" />
       </div>
