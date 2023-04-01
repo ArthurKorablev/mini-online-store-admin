@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
 import MainPreview from './containers/MainPreview';
 import MainLogin from './containers/MainLogin';
@@ -12,6 +12,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
+          <Route path='/' element={<Navigate to='/login'/>}/>
           <Route path='/login' element={<MainLogin/>}/>
           <Route element={<PrivateRoute/>}>
             <Route path='/products' element={<Products/>}/>

@@ -1,0 +1,153 @@
+/* .wraper{
+    margin: 0, 30px, 0, 30px ;
+} */
+
+body{
+    background: #44B26F; 
+}
+
+.logo{
+    width: 240px;
+    position: absolute;
+    top: 20.53px;
+    left: 29.54px;
+    z-index: 1;
+}
+
+.wraper_content{
+    padding: 20px;
+    background: white;
+    position: absolute;
+    width: 100%;
+    top: 78px;
+    left: 0;
+    height: 90%;
+    padding: 30px 75px 0 75px;
+
+    display: grid;
+    grid-template-areas: 
+    "arrow title title title . ."
+    "img img info . . ."
+    "descripTitle descripTitleName . . . ."
+    "descrip descrip descrip descrip descrip descrip";
+}
+
+.wraper_forArrow{
+    display: flex;
+    align-items: center;
+}
+
+.wraper_arrov{
+    grid-area: arrow;
+    font-size: 64px;
+    font-weight: 500;
+}
+
+.wraper_title{
+    grid-area: title;
+    display: flex;
+    align-items: center;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+
+    color: #000000;
+}
+
+.wraper_img{
+    width: 396px;
+    grid-area: img;
+}
+
+img{
+    width: 100%;
+}
+
+.wraper_info{
+    grid-area: info;
+}
+
+.check{
+    color: #44B26F;
+    font-size: 32px;
+    margin-right: 5px;
+}
+
+.product_check{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-size: 24px;
+    padding: 25px;
+    color: #44B26F;
+}
+
+.product_price{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 44px;
+    padding: 25px;
+
+    color: #FC5B00;
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.product_quantity{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    padding: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.wraper_discription_title{
+    grid-area: descripTitle;
+    display: flex;
+    align-items: center;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 39px;
+
+    text-align: start;
+
+    color: #000000;
+}
+
+.wraper_discription_title_name{
+    grid-area: descripTitleName;
+
+    display: flex;
+    align-items: center;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 39px;
+
+    text-align: start;
+
+    color: #D9D9D9;
+}
+
+.wraper_discription{
+    grid-area: descrip;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: start;
+}
