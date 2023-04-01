@@ -1,11 +1,10 @@
-import './style.css';
+import "./style.css";
 import Logo from "../../components/Logo";
-import ProductCard from '../../components/ProductCard';
+import ProductCard from "../../components/ProductCard";
 import { useEffect, useState } from "react";
 import { API_URL } from "../../constants";
 
 function MainPreview() {
-
   const [products, setProducts] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
   const [productId, setProductId] = useState(null);
@@ -34,8 +33,10 @@ function MainPreview() {
 
   return (
     <div className="main">
-        <Logo className="logo"/>
-        {products.map((product, index) => (<ProductCard key ={index} product={product}/>))}
+      <Logo className="logo" />
+      {products.map((product, index) => (
+        <ProductCard key={index} product={product} />
+      ))}
     </div>
   );
 }

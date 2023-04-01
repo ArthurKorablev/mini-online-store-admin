@@ -33,7 +33,7 @@ const Login = () => {
     setUserName("");
     setPassword("");
 
-    navigate('/products');
+    navigate("/products");
   };
 
   return (

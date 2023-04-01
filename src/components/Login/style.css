@@ -1,73 +1,73 @@
-.login{
-    position: absolute;
-    width: 500px;
-    height: 670px;
-    left: 467.5px;
-    top: 171.5px;
-    border-radius: 5px;
-    background-color: #F5F5F5;
+.login {
+  position: absolute;
+  width: 500px;
+  height: 670px;
+  left: calc(50% - 235.5px);
+  top: 101.5px;
+  border-radius: 5px;
+  background-color: #f5f5f5;
 }
 
-.userName{
-    border: 0;
-    position: absolute;
-    width: 277px;
-    height: 56px;
-    left: 116.5px;
-    top: 205.5px;
-    padding: 20px;
-    background: #D9D9D9;
-    box-sizing: border-box;
+.userName {
+  border: 0;
+  position: absolute;
+  width: 277px;
+  height: 56px;
+  left: 116.5px;
+  top: 205.5px;
+  padding: 20px;
+  background: #d9d9d9;
+  box-sizing: border-box;
 }
 
-.userPass{
-    position: absolute;
-    width: 277px;
-    height: 56px;
-    left: 116.5px;
-    top: 307.5px;
-    border: 0;
-    padding: 0;
-    padding: 20px;
-    background: #D9D9D9;
-    box-sizing: border-box;
+.userPass {
+  position: absolute;
+  width: 277px;
+  height: 56px;
+  left: 116.5px;
+  top: 307.5px;
+  border: 0;
+  padding: 0;
+  padding: 20px;
+  background: #d9d9d9;
+  box-sizing: border-box;
 }
 
-.userSubmit{
-    position: absolute;
-    width: 277px;
-    height: 56px;
-    left: 115.5px;
-    top: 400.5px;
-    color: white;
-    font-size: 24px;
-    font-weight: 600;
-    border: 0;
+.userSubmit {
+  position: absolute;
+  width: 277px;
+  height: 56px;
+  left: 115.5px;
+  top: 400.5px;
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  border: 0;
 
-    background: #44B26F;
+  background: #44b26f;
 }
 
-.userName::placeholder{
-    color: #44B26F;
-    font-size: 14px;
-    padding: 20px;
+.userName::placeholder {
+  color: #44b26f;
+  font-size: 14px;
+  padding: 20px;
 }
 
-.userPass::placeholder{
-    color: #44B26F;
-    font-size: 14px;
-    padding: 20px; 
+.userPass::placeholder {
+  color: #44b26f;
+  font-size: 14px;
+  padding: 20px;
 }
 
-.eye{
-    position: absolute;
-    top: 320px;
-    left: 345.5px;
-    border: none;
-    background-color: #D9D9D9;
+.eye {
+  position: absolute;
+  top: 320px;
+  left: 345.5px;
+  border: none;
+  background-color: #d9d9d9;
 }
 
-.eye-icon{
-    color: #44B26F;
-    font-size: 32px;
+.eye-icon {
+  color: #44b26f;
+  font-size: 32px;
 }
