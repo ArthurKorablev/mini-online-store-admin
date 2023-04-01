@@ -1,8 +1,11 @@
 import style from './style.module.css';
-import { API_URL } from '../../constants';
-import { useParams, useNavigate, Navigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+
 import Logo from '../../components/Logo';
+import { API_URL } from '../../constants';
+
+import { useParams, useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+
 import { BsArrowLeft } from "react-icons/bs";
 import { BsCheckCircle } from "react-icons/bs";
 

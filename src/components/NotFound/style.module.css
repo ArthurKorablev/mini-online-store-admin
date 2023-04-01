@@ -1,0 +1,31 @@
+.logo{
+    width: 240px;
+    position: absolute;
+    top: 20.53px;
+    left: 29.54px;
+    z-index: 1;
+}
+
+.num{
+    position: absolute;
+    top: calc(50% - 144px);
+    left: calc(50% - 43px);
+    font-size: 64px;
+    font-weight: 800;
+    margin: 0;
+    padding: 0;
+}
+
+.text{
+    position: absolute;
+    top: calc(50% - 64px);
+    left: calc(50% - 144px);
+    font-size: 64px;
+    font-weight: 800;
+    margin: 0;
+    padding: 0; 
+}
+
+.num, .text{
+    color: white;
+}
