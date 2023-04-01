@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { API_URL } from "../../constants";
 
 const Login = () => {
+  const [isError, setError] = useState(false);
   const [isShown, setIsShown] = useState(false);
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
@@ -23,10 +24,11 @@ const Login = () => {
     const data = await response.json();
 
     data.forEach((item) => {
-      console.log(item);
       if (userName === item.userName && password === item.password) {
-        console.log(item.jwt);
+
         localStorage.setItem("token", item.jwt);
+      }else{
+        setError(true);
       }
     });
 
@@ -43,7 +45,7 @@ const Login = () => {
           <input
             value={userName}
             onChange={(e) => setUserName(e.target.value)}
-            className="userName"
+            className={isError ? "userName error" : "userName"}
             type="text"
             placeholder="User Name"
           />
@@ -52,7 +54,7 @@ const Login = () => {
           <input
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="userPass"
+            className={isError ? "userPass error" : "userPass"}
             type={isShown ? "text" : "password"}
             placeholder="Password"
           />
